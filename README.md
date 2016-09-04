@@ -24,7 +24,7 @@ GetState() - returns a string with all data in FastStackQueue, including the dat
 Clean() - trunctuate front and back of internal array,  
 this would be used if you think the internal array got oversized at some point  
 (it only grows as much as it needs to, but it does not shrink back on its own).  
-It will also remove any unsued elements if you set RemoveImmediately = false for some reason.
+It will also remove any unsued elements if you set RemoveImmediately = false, for some reason.
 
 # Last words
 Feedback is welcome.
