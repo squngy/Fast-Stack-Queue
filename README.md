@@ -3,6 +3,8 @@ A fast Stack and Queue
 
 Most queues I found after some googling made extensive use of Array.shift() and Array.push(), which are unnecessarily slow methods to use for basically all interactions with the queue, so I decided to make my own, and gave it stack functionality on top (beacuse why not).
 
+This is especially useful for producer-consumer workloads.
+
 # Performance
 As long as you do not need to increase the maximum size, all operations are O(1).
 If you go past maximum size, the FastStackQueue will use splice() to increase its size, which is O(n).
