@@ -1,10 +1,10 @@
 class FastStackQueue {
-    constructor(size) {
+    constructor(size, removeImmediately) {
         this.Length = 0;
         this.Arr = new Array(size || 1);
         this.Pointer = 0;
         this.Last = null;
-        this.RemoveImmediately = true;
+        this.RemoveImmediately = removeImmediately | true;
     }
 
     Enqueque(element) {
@@ -52,7 +52,9 @@ class FastStackQueue {
         this.Length--;
         return el;
     }
-
+    Peek(){
+      return this.Arr[this.Last];
+    }
     Top() {
         if (this.Length === 0) {
             console.log("Tried to Peek an empty array");
